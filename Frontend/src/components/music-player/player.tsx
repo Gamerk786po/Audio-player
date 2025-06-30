@@ -62,6 +62,7 @@ const Player = () => {
               ref={mediaRef as React.RefObject<HTMLVideoElement>}
               src={fileURL}
               controls
+              autoPlay loop 
               className="w-full max-w-md rounded-lg shadow-lg"
             />
           ) : (
@@ -69,6 +70,7 @@ const Player = () => {
               ref={mediaRef as React.RefObject<HTMLAudioElement>}
               src={fileURL}
               controls
+              autoPlay loop 
               className="w-full max-w-md rounded-lg shadow-lg"
             />
           )}
