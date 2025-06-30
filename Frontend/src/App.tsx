@@ -1,7 +1,6 @@
 import AnimeGirl from "./components/anime-girl/anime-girl";
 import Player from "./components/music-player/player";
 
-
 // The app function
 function App() {
   // Returning
