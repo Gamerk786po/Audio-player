@@ -8,7 +8,7 @@ const Player = () => {
   const [isVideo, setIsVideo] = useState<boolean>(false);
   // Reference for the file
   const mediaRef = useRef<HTMLAudioElement | HTMLVideoElement | null>(null);
-    // Function for file changing
+  // Function for file changing
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -18,20 +18,20 @@ const Player = () => {
     setFileURL(url);
     setIsVideo(file.type.startsWith("video"));
   };
-//   Fucntion for playing the video
+  //   Fucntion for playing the video
   const playMedia = () => {
     mediaRef.current?.play();
   };
-// Function for pausing
+  // Function for pausing
   const pauseMedia = () => {
     mediaRef.current?.pause();
   };
-// Returning the component
+  // Returning the component
   return (
     // The main div
     <div className="min-h-screen flex flex-col font-bold gap-10 items-center justify-center px-4">
       {/* The main heading */}
-      <h1 className="text-white text-4xl lg:text-6xl">Play Your Vibe</h1>
+      <h1 className="text-white text-4xl lg:text-6xl md:hidden lg:inline">Play Your Vibe</h1>
       {/* The div containg the add audio button */}
       <div className="flex flex-col items-center gap-4">
         <input
